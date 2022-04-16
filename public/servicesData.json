@@ -1,23 +1,23 @@
 [
     {
         "id": 1,
-        "name": "Events IT Solutions",
-        "img": "https://i.ibb.co/3W8JMbh/service-1.jpg",
+        "name": "Cosmetic Dentistry",
+        "img": "https://i.ibb.co/YXJDM0J/service-1.png",
         "price": 1775,
-        "description": "Event management is no trivial task. Logistics and resource management can be challenging, to say the least. Imagine you could promote events. coordinate suppliers."
+        "description": " It's any dental work focused on improving the appearance of the teeth, gums, and smile. However, cosmetic dentistry can not only fix imperfections of the teeth."
     },
     {
         "id": 2,
-        "name": "Cyber Security",
-        "img": "https://i.ibb.co/njLLpVw/service-2.jpg",
+        "name": "Pediatric Dentistry",
+        "img": "https://i.ibb.co/8rDX6cF/service-2.png",
         "price": 1400,
-        "description": "Cyber security is the application of technologies, processes, and controls to protect systems, networks, programs, devices, and data from cyber-attacks It aims to reduce the risk."
+        "description": "Pediatric dentists, also called pedodontists, specialize in diagnosing and treating dental problems in infants, children, and teenagers. The gums and teeth."
     },
     {
         "id": 3,
-        "name": "Product Design",
-        "img": "https://i.ibb.co/bvsz0dY/service-3.jpg",
+        "name": "Dental Implants",
+        "img": "https://i.ibb.co/X37Bp3D/service-3.png",
         "price": 2295,
-        "description": "The definition of product design describes the process of imagining, creating, and iterating products that solve users' problems or address specific needs in a given market."
+        "description": "A dental implant is a metal post that replaces the root portion of a missing tooth. An artificial tooth (crown) is placed on an extension of the post on the dental."
     }
 ]
