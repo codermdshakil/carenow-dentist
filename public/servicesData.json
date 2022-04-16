@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Events IT Solutions",
+        "img": "https://i.ibb.co/3W8JMbh/service-1.jpg",
+        "price": 1775,
+        "description": "Event management is no trivial task. Logistics and resource management can be challenging, to say the least. Imagine you could promote events. coordinate suppliers."
+    },
+    {
+        "id": 2,
+        "name": "Cyber Security",
+        "img": "https://i.ibb.co/njLLpVw/service-2.jpg",
+        "price": 1400,
+        "description": "Cyber security is the application of technologies, processes, and controls to protect systems, networks, programs, devices, and data from cyber-attacks It aims to reduce the risk."
+    },
+    {
+        "id": 3,
+        "name": "Product Design",
+        "img": "https://i.ibb.co/bvsz0dY/service-3.jpg",
+        "price": 2295,
+        "description": "The definition of product design describes the process of imagining, creating, and iterating products that solve users' problems or address specific needs in a given market."
+    }
+]
