@@ -3,21 +3,21 @@
         "id": 1,
         "name": "Cosmetic Dentistry",
         "img": "https://i.ibb.co/YXJDM0J/service-1.png",
-        "price": 1775,
+        "price": 775,
         "description": " It's any dental work focused on improving the appearance of the teeth, gums, and smile. However, cosmetic dentistry can not only fix imperfections of the teeth."
     },
     {
         "id": 2,
         "name": "Pediatric Dentistry",
         "img": "https://i.ibb.co/8rDX6cF/service-2.png",
-        "price": 1400,
+        "price": 820,
         "description": "Pediatric dentists, also called pedodontists, specialize in diagnosing and treating dental problems in infants, children, and teenagers. The gums and teeth."
     },
     {
         "id": 3,
         "name": "Dental Implants",
         "img": "https://i.ibb.co/X37Bp3D/service-3.png",
-        "price": 2295,
+        "price": 935,
         "description": "A dental implant is a metal post that replaces the root portion of a missing tooth. An artificial tooth (crown) is placed on an extension of the post on the dental."
     }
 ]

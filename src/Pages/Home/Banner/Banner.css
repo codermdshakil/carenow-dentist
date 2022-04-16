@@ -1,0 +1,10 @@
+
+.banner-container{
+    background-image: url(../../../images/banner_shape.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 90vh;
+    width: 100%;
+    margin-top: 100px;
+}
