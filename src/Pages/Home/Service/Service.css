@@ -1,0 +1,67 @@
+
+.service-box{
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    transition: .3s ease-in-out;
+}
+.service-box:hover{
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+}
+.service-box img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 300px;
+}
+.img-frame{
+    overflow: hidden;
+}
+.img-frame img {
+    transition: .3s ease-in;
+}
+.img-frame img:hover{
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.service-details{
+    padding: 20px;
+}
+.serviceDetail-btn {
+    padding: 10px 16px;
+    border: unset;
+    border-radius: 15px;
+    color: #091d3e;
+    z-index: 1;
+    background: #33b8c8;
+    position: relative;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.serviceDetail-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+.serviceDetail-btn:hover {
+    color: #e8e8e8;
+}
+
+.serviceDetail-btn:hover::before {
+    width: 100%;
+}
+

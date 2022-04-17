@@ -2,7 +2,7 @@ import React from 'react';
 import './Banner.css';
 import person1 from '../../../images/persons/person-2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 const Banner = () => {
     return (
