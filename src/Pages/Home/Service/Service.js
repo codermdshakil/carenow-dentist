@@ -16,7 +16,7 @@ const Service = ({ product }) => {
                 </div>
                 <div className='service-details'>
                     <h3>{name}</h3>
-                    <h4>$ {price}</h4>
+                    <h4>${price}</h4>
                     <p>{description}</p>
                     <button className='serviceDetail-btn' >Show Details <FontAwesomeIcon className='ms-2' icon={faArrowRight} /></button>
                 </div>
