@@ -1,17 +1,15 @@
-
-/* google fonts linked here  */
+/* google font  lineked here */
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800&display=swap');
 
-
-*{
+* {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   box-sizing: border-box;
   font-weight: 400;
-  text-decoration: none;
+  /* font-family: 'Jost', sans-serif; */
   font-family: 'Poppins', sans-serif;
+  /* font-family: 'Rubik', sans-serif; */
 }
-
 
 
 .App-logo {
@@ -44,6 +42,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
