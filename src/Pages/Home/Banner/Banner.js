@@ -6,7 +6,7 @@ import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 const Banner = () => {
     return (
-        <div className='banner-container'>
+        <div className='banner-container' id='banner' >
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-6 col-11 d-block m-auto m-md-0">

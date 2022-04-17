@@ -9,7 +9,7 @@ const Service = ({ product }) => {
     const { img, name, price, description } = product;
 
     return (
-        <div className='col-lg-4 col-md-6 col-11  '>
+        <div className='col-lg-4 col-md-6 col-11 d-block m-auto m-md-0  '>
             <div className='service-box'>
                 <div className="img-frame">
                     <img src={img} alt="" />
