@@ -3,3 +3,8 @@
     background-color: #1b2f4d;
     padding: 20px;
 }
+.developer a{
+    text-decoration: none;
+    color:#33b8c8 ;
+    cursor: pointer;
+}

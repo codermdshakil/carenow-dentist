@@ -1,6 +1,6 @@
 import React from 'react';
-import './Footer.css';
 import footerLogo from '../../images/footer-logo.png';
+import './Footer.css';
 
 const Footer = () => {
 
@@ -16,7 +16,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-lg-8 col-md-8 col-11 text-center mt-4">
-                        <p> &copy;  All right Reserved <span style={{fontWeight:'bolder', cursor:'pointer'}}> <a className='text-decoration-none text-light' href="https://www.linkedin.com/in/codermdshakil/" target="_blank"> Md. Shakil Ahmed </a></span> | Student of Programming Hero - {date} </p>
+                        <p> &copy;  All right Reserved <span className='developer'> <a  href="https://www.linkedin.com/in/codermdshakil/" target="_blank"> Md. Shakil Ahmed </a></span> | Student of Programming Hero - {date} </p>
                     </div>
                 </div>
             </div>

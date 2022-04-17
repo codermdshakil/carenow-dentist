@@ -17,7 +17,7 @@ const Services = () => {
 
     return (
         <div>
-            <div className="container" id="service">
+            <div className="container mb-5 pb-4" id="service">
                 <h2 className='text-center service-title'>Our Services</h2>
                 <h4 className=' w-md-50  d-block m-auto text-center pb-5 semi-services-title'>Providing Medical Care ForThe <br />  Sickest   In Our Community.</h4>
                 <div className="row">
