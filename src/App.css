@@ -6,9 +6,12 @@
   padding: 0px;
   box-sizing: border-box;
   font-weight: 400;
-  /* font-family: 'Jost', sans-serif; */
   font-family: 'Poppins', sans-serif;
-  /* font-family: 'Rubik', sans-serif; */
+}
+
+p{
+  font-size: 16px;
+  color: gray;
 }
 
 
