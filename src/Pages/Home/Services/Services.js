@@ -12,8 +12,6 @@ const Services = () => {
             .then(data => setOurServices(data))
     }, [])
 
-    console.log(ourServices)
-
 
     return (
         <div>
