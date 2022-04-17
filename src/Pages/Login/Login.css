@@ -6,13 +6,17 @@
 .form-container {
     border: 1px solid lightgray;
     padding: 35px 25px;
+    margin-top: 50px;
     border-radius: 10px;
 }
 
 .form-container h3 {
     text-align: center;
     padding: 10px 0px;
-    color: #1b2f4d;
+    color: #33b8c8;
+    border-bottom: 2px solid #1b2f4d;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .form-container label {
@@ -52,9 +56,34 @@
     color:#fff;
 }
 
+.toggle-signup-btn{
+    text-decoration: none;
+    color: #33b8c8;
+}
 .goolge-btn{
     width: 100%;
     padding: 8px;
     border-radius:22px;
     border: none;
+    transition: .3s ease;
+}
+.goolge-btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.or-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #95A0A7;
+}
+
+.first-border{
+    width: 120px;
+    height: 1px;
+    background-color: #95A0A7;
+}
+.last-border{
+    width: 120px;
+    height: 1px;
+    background-color: #95A0A7;
 }
