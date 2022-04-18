@@ -69,12 +69,12 @@ const SignUp = () => {
             <div className="container pt-5 mt-5 main-form-container">
                 <div className="row d-flex align-items-center">
                     <div className="col-lg-7 col-md-8 col-11 d-block m-auto">
-                        <div>
+                        <div data-aos="fade-down-right">
                             <img className='img-fluid' src={loginImg} alt="" />
                         </div>
                     </div>
                     <div className="col-lg-5 col-md-8 col-11 d-block m-auto order-first order-md-last">
-                        <div className='form-container'>
+                        <div className='form-container' data-aos="fade-down-left">
                             <h3 >Please Register</h3>
                             <form onSubmit={handleFormSubmit} >
                                 <label htmlFor="email">Email</label><br />

@@ -18,7 +18,7 @@ const Service = ({product}) => {
 
     return (
         <div className='col-lg-4 col-md-6 col-11 d-block m-auto m-md-0  '>
-            <div className='service-box'>
+            <div className='service-box ' data-aos='fade-up'>
                 <div className="img-frame">
                     <img src={img} alt="" />
                 </div>

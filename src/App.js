@@ -11,7 +11,10 @@ import SignUp from './Pages/SignUp/SignUp';
 import RequireAuth from './Shared/RequireAuth/RequireAuth';
 import ServicesDetails from './Pages/Home/ServicesDetails/ServicesDetails';
 import Blogs from './Pages/Blogs/Blogs';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+AOS.init();
 
 const App = () => {
   return (

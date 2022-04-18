@@ -8,7 +8,7 @@ const Blogs = () => {
             <div className="container mt-5 pt-5">
                 <div className="row">
                     <div className="col-lg-8  col-md-10 col-11 d-block m-auto">
-                        <div className="questionAndAnsBox">
+                        <div className="questionAndAnsBox" data-aos="fade-down">
                             <h2 className='text-center text-info mb-4' >Questions and Answers</h2>
                             <div className="qustionAndAns">
                                 <h5> <b>Question 1</b>. Differente between authorization and authentication ?</h5>
