@@ -2,7 +2,7 @@ import { faMoneyCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 
-const ServicesDetails = () => {
+const CheckOut = () => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -65,4 +65,4 @@ const ServicesDetails = () => {
     );
 };
 
-export default ServicesDetails;
+export default CheckOut;

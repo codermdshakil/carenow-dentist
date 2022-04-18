@@ -8,8 +8,10 @@ import Footer from './Shared/Footer/Footer';
 import NotFound from './Shared/NotFound/NotFound';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
-import ServicesDetails from './Pages/Home/ServiceDetails/ServicesDetails';
 import RequireAuth from './Shared/RequireAuth/RequireAuth';
+import ServicesDetails from './Pages/Home/ServicesDetails/ServicesDetails';
+import Blogs from './Pages/Blogs/Blogs';
+
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
             <ServicesDetails></ServicesDetails>
           </RequireAuth>
         }></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
