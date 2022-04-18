@@ -18,8 +18,6 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
-    console.log(errorMessage);
-
     const [user] = useAuthState(auth);
 
     const [signInWithEmailAndPassword, ,loading , error] = useSignInWithEmailAndPassword(auth);
