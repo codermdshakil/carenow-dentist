@@ -69,12 +69,12 @@ const Login = () => {
             <div className="container pt-5 mt-2 main-form-container">
                 <div className="row d-flex align-items-center">
                     <div className="col-lg-7 col-md-8 col-11 d-block m-auto">
-                        <div  data-aos="fade-down-right">
+                        <div  data-aos="fade-right" >
                             <img className='img-fluid' src={loginImg} alt="" />
                         </div>
                     </div>
                     <div className="col-lg-5 col-md-8 col-11 d-block m-auto order-first order-md-last">
-                        <div className='form-container' data-aos="fade-down-left">
+                        <div className='form-container' data-aos="fade-left">
                             <h3 >Please Login</h3>
                             <form onSubmit={handleFormSubmit} >
                                 <label htmlFor="email">Email</label><br />
