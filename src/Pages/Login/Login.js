@@ -1,7 +1,7 @@
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import loginImg from '../../images/login.png';
 import googleLogo from '../../images/google.png';
@@ -13,13 +13,22 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = (''); 
+    const [errorMessage, setErrorMessage] = ('');
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location?.state?.from?.pathname || "/";
 
     console.log(errorMessage);
 
     const [signInWithEmailAndPassword, user, , error] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle] = useSignInWithGoogle(auth);
     console.log(user)
+
+
+
+    if (user) {
+        navigate(from, { replace: true })
+    }
 
 
     // handle email 
@@ -34,10 +43,15 @@ const Login = () => {
     }
 
 
+
     const handleFormSubmit = e => {
         e.preventDefault();
         signInWithEmailAndPassword(email, password)
-        if(error){
+            .then(() => {
+                navigate(from, { replace: true })
+            })
+
+        if (error) {
             setErrorMessage(error)
         }
     }
