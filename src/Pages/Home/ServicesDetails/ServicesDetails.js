@@ -33,7 +33,7 @@ const CheckOut = () => {
     // handle form submit funtion 
     const handleFormSubmit = e => {
         e.preventDefault();
-        setMessage('Thank you for Booking')
+        setMessage('Thank you for the Booking')
     }
 
 

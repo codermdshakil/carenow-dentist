@@ -13,11 +13,7 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = ('');
-
-    // const location = useLocation();
-    // const navigate = useNavigate();
-    // const from = location?.state?.from?.pathname || "/";
+    const [errorMessage, setErrorMessage] = useState('');
 
     console.log(errorMessage);
 
@@ -48,16 +44,17 @@ const Login = () => {
     const handleFormSubmit = e => {
         e.preventDefault();
         signInWithEmailAndPassword(email, password)
-        .catch((error)=>{
-            console.log(error)
-        })
-        if(error){
-            setErrorMessage(error);
+        setErrorMessage('');
+
+        if (error) {
+            return setErrorMessage(error.message);
         }
+
+
     }
 
-    if(user){
-        navigate(from, {replace:true});
+    if (user) {
+        navigate(from, { replace: true });
     }
 
     const handleGoogleSignIn = () => {
@@ -69,12 +66,12 @@ const Login = () => {
             <div className="container pt-5 mt-2 main-form-container">
                 <div className="row d-flex align-items-center">
                     <div className="col-lg-7 col-md-8 col-11 d-block m-auto">
-                        <div  data-aos="fade-right" >
+                        <div data-aos="fade-right" >
                             <img className='img-fluid' src={loginImg} alt="" />
                         </div>
                     </div>
                     <div className="col-lg-5 col-md-8 col-11 d-block m-auto order-first order-md-last">
-                        <div className='form-container' data-aos="fade-left">
+                        <div className='form-container' >
                             <h3 >Please Login</h3>
                             <form onSubmit={handleFormSubmit} >
                                 <label htmlFor="email">Email</label><br />
@@ -82,7 +79,7 @@ const Login = () => {
                                 <label htmlFor="password">Password</label><br />
                                 <input onBlur={handlePasswordBlur} type="password" name="password" placeholder='Enter your password' required /><br />
                                 <p className='forget-title'>Forget Password</p>
-                                <button className='login-btn mb-3' >Log In <FontAwesomeIcon className='ms-3' icon={faArrowCircleRight} /></button>
+                                <button type='submit' className='login-btn mb-3' >Log In <FontAwesomeIcon className='ms-3' icon={faArrowCircleRight} /></button>
                                 <p className='text-center'>Don't have an Account? <Link className='text-decoration-none' to='/signup'> <span className='toggle-signup-btn'> Sign Up </span> </Link></p>
                             </form>
                             <div className='or-title'>
@@ -92,7 +89,7 @@ const Login = () => {
                                 </div>
                                 <div className='last-border'></div>
                             </div>
-                            <p>{errorMessage}</p>
+                            <p className='bg-danger text-white text-center rounded'>{errorMessage}</p>
                             <button onClick={handleGoogleSignIn} className='goolge-btn'> <img src={googleLogo} className="mr-3" alt="" />     Sign In with Google</button>
                         </div>
                     </div>

@@ -94,8 +94,8 @@ const SignUp = () => {
                                 </div>
                                 <div className='last-border'></div>
                             </div>
-                            <p className='text-danger text-center'>{error}</p>
-                            <p className='text-success text-center'>{success}</p>
+                            <p className='bg-danger  text-white rounded text-center'>{error}</p>
+                            <p className='bg-success text-white rounded  text-center'>{success}</p>
                             <button onClick={handleSignInWithGoogle} className='goolge-btn'> <img src={googleLogo} className="mr-3" alt="" />     Sign in with Google</button>
                         </div>
                     </div>
