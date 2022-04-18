@@ -13,6 +13,7 @@ import ServicesDetails from './Pages/Home/ServicesDetails/ServicesDetails';
 import Blogs from './Pages/Blogs/Blogs';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import About from './Pages/About/About';
 
 AOS.init();
 
@@ -29,6 +30,7 @@ const App = () => {
           </RequireAuth>
         }></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

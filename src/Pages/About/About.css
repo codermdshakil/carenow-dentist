@@ -1,0 +1,74 @@
+.about-containers{
+    background-image: url(../../images/bars1.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.profile-frame{
+    overflow: hidden;
+    width: 400px;
+    display: block;
+    margin: auto;
+    height: 400px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.profile-frame img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    transition: .4s ease-in;
+}
+.profile-frame img:hover{
+    transform: scale(1.1);
+}
+.about-title{
+    /* color: #4489f4; */
+    color: #1b2f4d;
+    font-size: 30px;
+}
+.my-info{
+    position: relative;
+    background-color: #fff;
+}
+.about-title::before{
+    content: "";
+    position: absolute;
+    width: 190px;
+    background-color: #23bb98;
+    height: 3px;
+    top: 42px;
+    left: -8px;
+}
+.about-title::after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #4489f4;
+    height: 60px;
+    top: -3px;
+    left: 6px;
+}
+
+.name{
+    font-weight: 600;
+    color: #4489f4;
+}
+.title-frame{
+    margin-left: 20px;
+}
+
+
+@media only  screen  and (max-width:1024px){
+    .profile-frame{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media only  screen  and (max-width:576px){
+    .profile-frame{
+        width: 300px;
+        height: 300px;
+    }
+}

@@ -41,7 +41,7 @@ const CheckOut = () => {
         <div className="container pt-5 mt-2 main-form-container">
                 <div className="row d-flex align-items-center">
                     <div className="col-lg-5 col-md-8 col-11 d-block m-auto order-first order-md-last">
-                        <div className='form-container'>
+                        <div className='form-container' data-aos="zoom-in-down">
                             <h3 > Check Out Information </h3>
                             <form onSubmit={handleFormSubmit}>
                                 <label htmlFor="name">Name</label><br />

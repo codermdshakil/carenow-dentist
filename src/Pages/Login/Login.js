@@ -23,7 +23,7 @@ const Login = () => {
 
     const [user] = useAuthState(auth);
 
-    const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, , , error] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle] = useSignInWithGoogle(auth);
 
 
@@ -48,6 +48,12 @@ const Login = () => {
     const handleFormSubmit = e => {
         e.preventDefault();
         signInWithEmailAndPassword(email, password)
+        .catch((error)=>{
+            console.log(error)
+        })
+        if(error){
+            setErrorMessage(error);
+        }
     }
 
     if(user){
@@ -63,7 +69,7 @@ const Login = () => {
             <div className="container pt-5 mt-2 main-form-container">
                 <div className="row d-flex align-items-center">
                     <div className="col-lg-7 col-md-8 col-11 d-block m-auto">
-                        <div data-aos="fade-right" data-aos-duration='200'>
+                        <div  data-aos="fade-down-right">
                             <img className='img-fluid' src={loginImg} alt="" />
                         </div>
                     </div>
@@ -86,6 +92,7 @@ const Login = () => {
                                 </div>
                                 <div className='last-border'></div>
                             </div>
+                            <p>{errorMessage}</p>
                             <button onClick={handleGoogleSignIn} className='goolge-btn'> <img src={googleLogo} className="mr-3" alt="" />     Sign In with Google</button>
                         </div>
                     </div>
