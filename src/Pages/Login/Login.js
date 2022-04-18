@@ -5,7 +5,7 @@ import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import loginImg from '../../images/login.png';
 import googleLogo from '../../images/google.png';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle, useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 
@@ -14,22 +14,23 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = ('');
-    const location = useLocation();
-    const navigate = useNavigate();
-    const from = location?.state?.from?.pathname || "/";
+
+    // const location = useLocation();
+    // const navigate = useNavigate();
+    // const from = location?.state?.from?.pathname || "/";
 
     console.log(errorMessage);
 
-    const [signInWithEmailAndPassword, user, , error] = useSignInWithEmailAndPassword(auth);
+    const [user] = useAuthState(auth);
+
+    const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle] = useSignInWithGoogle(auth);
-    console.log(user)
 
 
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    if (user) {
-        navigate(from, { replace: true })
-    }
-
+    const from = location.state?.from?.pathname || "/"
 
     // handle email 
     const handleEmailBlur = e => {
@@ -47,15 +48,11 @@ const Login = () => {
     const handleFormSubmit = e => {
         e.preventDefault();
         signInWithEmailAndPassword(email, password)
-            .then(() => {
-                navigate(from, { replace: true })
-            })
-
-        if (error) {
-            setErrorMessage(error)
-        }
     }
 
+    if(user){
+        navigate(from, {replace:true});
+    }
 
     const handleGoogleSignIn = () => {
         signInWithGoogle();
