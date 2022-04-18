@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import googleLogo from '../../images/google.png';
 import loginImg from '../../images/login.png';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword,  useSignInWithGoogle, } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-
+import Spinners from '../../Shared/Spinner/Spinner';
 
 
 const SignUp = () => {
@@ -18,9 +18,15 @@ const SignUp = () => {
     const [success, setSuccess] = useState('');
 
 
-    const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
-    const [signInWithGoogle] = useSignInWithGoogle(auth);
 
+    const [createUserWithEmailAndPassword, , loading] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
+    const [signInWithGoogle, , loading1] = useSignInWithGoogle(auth);
+
+
+
+    if(loading || loading1){
+        return <Spinners></Spinners>
+    }
 
     // handle email 
     const handleEmailBlur = e => {
@@ -43,19 +49,21 @@ const SignUp = () => {
 
         e.preventDefault();
 
+        createUserWithEmailAndPassword(email, password);
+        setSuccess('Sign Up Successfull');
+        setError('');
+
         if (password !== confirmPassword) {
             setError('Your two password did not match!');
-            setSuccess('')
+            setSuccess('');
             return;
         }
         else if (password.length < 6 || confirmPassword.length < 6) {
             setError('Your password should 6 character and longer!');
-            setSuccess('')
+            setSuccess('');
             return;
         }
-        createUserWithEmailAndPassword(email, password);
-        setSuccess('Sign Up Successfull')
-        setError('');
+
     }
 
     const handleSignInWithGoogle = () => {
@@ -82,8 +90,7 @@ const SignUp = () => {
                                 <label htmlFor="password">Password</label><br />
                                 <input onBlur={handlePasswordBlur} type="password" name="password" placeholder='Enter your password' required /><br />
                                 <label htmlFor="confirmPassword">Confirm Password</label><br />
-                                <input onBlur={handleConfirmPasswordBlur} type="password" name="confirmPassword" placeholder='Enter your confirm password' required /><br />
-                                <p className='forget-title'>Forget Password</p>
+                                <input onBlur={handleConfirmPasswordBlur} className="mb-4" type="password" name="confirmPassword" placeholder='Enter your confirm password' required /><br />
                                 <button className='login-btn mb-3 ' >Sign Up <FontAwesomeIcon className='ms-3' icon={faArrowCircleRight} /></button>
                                 <p className='text-center'> Already have an Account? <Link className='text-decoration-none' to='/login'> <span className='toggle-signup-btn'> Log In </span> </Link> </p>
                             </form>
